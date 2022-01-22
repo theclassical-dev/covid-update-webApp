@@ -1,9 +1,10 @@
 <template>
     <div class="container">
         <Header />
+
+        <Home />
     </div>
 
-    <Home />
 </template>
 
 <script>

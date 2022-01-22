@@ -4,7 +4,7 @@
         <!-- data div -->
         <DataDiv :status="status"/>
         <!-- countries div -->
-        <Countries  />
+        <Countries @getCountry="getData" :countries="countries" />
 
     </main>
   <main v-else class="flex flex-col align-center justify-center text-center items-center">
@@ -41,7 +41,12 @@ export default {
             const data = await res.json()
             return data
         },
+        getData(country) {
+            this.status = country
+            this.title = country.Country
+        },
     },
+    
     async created() {
         const data = await this.fetchData()
 
