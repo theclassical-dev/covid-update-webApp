@@ -1,7 +1,12 @@
 <template>
-  <main v-if="!loading">
-      <DataTitle :text="title" :dataDate="dataDate" />
-  </main>
+    <main v-if="!loading">
+        <DataTitle :text="title" :dataDate="dataDate" />
+        <!-- data div -->
+        <DataDiv :status="status"/>
+        <!-- countries div -->
+        <Countries  />
+
+    </main>
   <main v-else class="flex flex-col align-center justify-center text-center items-center">
       <div class="text-gray-500 text-3xl mt-10 mb-6">Fatching</div>
       <img :src="loadingImage" class="w-24 m-auto">
@@ -10,11 +15,15 @@
 
 <script>
 import DataTitle from '@/components/DataTitle'
+import DataDiv from '@/components/DataDiv'
+import Countries from '@/components/Countries'
 
 export default {
     name: 'Home',
     components:{
-        DataTitle
+        DataTitle,
+        DataDiv,
+        Countries
     },
     data() {
         return {
