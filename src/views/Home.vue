@@ -5,7 +5,8 @@
         <DataDiv :status="status"/>
         <!-- countries div -->
         <Countries @getCountry="getData" :countries="countries" />
-
+        <!-- button -->
+        <button @click="Refresh" v-if="status.Country" class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-gray-600">Refresh</button>
     </main>
   <main v-else class="flex flex-col align-center justify-center text-center items-center">
       <div class="text-gray-500 text-3xl mt-10 mb-6">Fatching</div>
@@ -45,6 +46,13 @@ export default {
             this.status = country
             this.title = country.Country
         },
+        async Refresh() {
+            this.loading = true
+            const data = await this.fetchData()
+            this.title = 'Global'
+            this.status = data.Global
+            this.loading = false
+        }
     },
     
     async created() {
