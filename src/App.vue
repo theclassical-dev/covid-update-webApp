@@ -1,5 +1,5 @@
 <template>
-<div class="bg-white sm:bg-gray-900 h-screen w-full">
+<div class="bg-white md:bg-gray-900 h-screen w-full">
     <div class="container">
         <Header :text="title" />
 

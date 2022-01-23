@@ -6,7 +6,9 @@
         <!-- countries div -->
         <Countries @getCountry="getData" :countries="countries" />
         <!-- button -->
-        <button @click="Refresh" v-if="status.Country" class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-gray-600">Refresh</button>
+        <button @click="Refresh" v-if="status.Country" class="bg-green-700 text-white rounded p-3 mt-10 mb-5 sm:mb-0 focus:outline-none hover:bg-gray-600">Refresh</button>
+        <!-- footer -->
+        <Footer />
     </main>
   <main v-else class="flex flex-col align-center justify-center text-center items-center">
       <div class="text-gray-500 text-3xl mt-10 mb-6">Fatching</div>
@@ -18,13 +20,15 @@
 import DataTitle from '@/components/DataTitle'
 import DataDiv from '@/components/DataDiv'
 import Countries from '@/components/Countries'
+import Footer from '@/components/Footer'
 
 export default {
     name: 'Home',
     components:{
         DataTitle,
         DataDiv,
-        Countries
+        Countries,
+        Footer
     },
     data() {
         return {
