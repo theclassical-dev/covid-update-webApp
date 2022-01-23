@@ -1,10 +1,11 @@
 <template>
+<div class="bg-white sm:bg-gray-900 h-screen w-full">
     <div class="container">
-        <Header />
+        <Header :text="title" />
 
-        <Home />
+        <Home @update="updates"/>
     </div>
-
+</div>
 </template>
 
 <script>
@@ -13,9 +14,19 @@ import Home from './views/Home'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      title: 'Global'
+    }
+  },
   components: {
     Header,
     Home
+  },
+  methods: {
+    updates(country) {
+      this.title = country.Country
+    }
   }
 }
 </script>

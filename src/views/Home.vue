@@ -1,6 +1,6 @@
 <template>
     <main v-if="!loading">
-        <DataTitle :text="title" :dataDate="dataDate" />
+        <DataTitle class="text-white" :text="title" :dataDate="dataDate" />
         <!-- data div -->
         <DataDiv :status="status"/>
         <!-- countries div -->
@@ -45,6 +45,8 @@ export default {
         getData(country) {
             this.status = country
             this.title = country.Country
+
+            this.$emit('update', country)
         },
         async Refresh() {
             this.loading = true
