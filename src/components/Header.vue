@@ -13,8 +13,5 @@
 export default {
   name: 'Header',
   props: ['text'],
-  methods: {
-
-  }
 }
 </script>

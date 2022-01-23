@@ -2,7 +2,7 @@
 
     <div class="grid md:grid-cols-3 gap-4">
         <!-- #1 div -->
-        <div class="shadow-md bg-blue-100 p-10 text-center rounded">
+        <div class="shadow-md bg-blue-100 hover:text-gray-200 hover:bg-blue-500 p-10 text-center rounded">
             <h3 class="text-3xl text-blue-900 font-bold mb-4">Cases</h3>
             <div class="text-2xl mb-4">
                 <span class="font-bold">New:</span>
@@ -15,8 +15,8 @@
         </div>
 
         <!-- #1 div -->
-        <div class="shadow-md bg-red-200 p-10 text-center rounded">
-            <h3 class="text-3xl text-red-900 font-bold mb-4">Deaths</h3>
+        <div class="shadow-md bg-red-200 hover:text-gray-200 hover:bg-red-900 p-10 text-center rounded">
+            <h3 class="text-3xl text-red-500 font-bold mb-4">Deaths</h3>
             <div class="text-2xl mb-4">
                 <span class="font-bold">New:</span>
                 {{ numWithCommas(status.NewDeaths) }}
@@ -28,7 +28,7 @@
         </div>
 
         <!-- #1 div -->
-        <div class="shadow-md bg-blue-200 p-10 text-center rounded">
+        <div class="shadow-md bg-blue-200 p-10 text-center hover:bg-blue-100 rounded">
             <h3 class="text-3xl text-blue-900 font-bold mb-4">Recovery</h3>
             <div class="text-2xl mb-4">
                 <span class="font-bold">New:</span>

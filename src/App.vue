@@ -16,7 +16,7 @@ export default {
   name: 'App',
   data() {
     return {
-      title: 'Global'
+      title: 'Global',
     }
   },
   components: {
@@ -26,7 +26,7 @@ export default {
   methods: {
     updates(country) {
       this.title = country.Country
-    }
+    },
   }
 }
 </script>
